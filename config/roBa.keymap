@@ -65,6 +65,13 @@
             #binding-cells = <0>;
             bindings = <&kp LC(UP_ARROW)>, <&kp LS(LG(V))>;
         };
+
+        scroll: scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp K_SCROLL_UP>, <&kp K_SCROLL_DOWN>;
+        };
     };
 
     keymap {
@@ -78,7 +85,7 @@
 &mt LEFT_COMMAND ESCAPE  &mt LEFT_SHIFT TAB  &kp LEFT_ALT  &mkp RCLK  &kp SPACE  &mkp LCLK           &lt 1 LANGUAGE_1  &lt 2 LANGUAGE_2                             &kp BACKSPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll>;
         };
 
         layer1 {
