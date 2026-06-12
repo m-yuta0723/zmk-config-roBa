@@ -134,7 +134,7 @@ behaviors {
 &mt LEFT_COMMAND ESCAPE  &mt LEFT_SHIFT TAB  &kp LEFT_ALT  &mkp RCLK  &kp SPACE  &mkp LCLK      &lt 1 BACKSPACE  &lt 2 ENTER                             &kp LC(UP_ARROW)
             >;
 
-            sensor-bindings = <&scroll>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         layer1 {
