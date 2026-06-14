@@ -31,13 +31,8 @@
     combos {
         compatible = "zmk,combos";
 
-        mb3 {
-            bindings = <&mkp MB3>;
-            key-positions = <38 39>;
-        };
-
         lang1 {
-            bindings = <&kp LANGUAGE_1>;
+            bindings = <&kp LANG1>;
             key-positions = <39 38>;
         };
 
