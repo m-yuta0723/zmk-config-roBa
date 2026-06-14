@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
@@ -85,23 +86,25 @@
         };
     };
 
-behaviors {
-    lt_to_layer_0: lt_to_layer_0 {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LAYER_TAP_TO_0";
-        bindings = <&mo>, <&to_layer_0>;
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-    };
+    behaviors {
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
 
-    encoder_msc_down_up: encoder_msc_down_up {
-        compatible = "zmk,behavior-sensor-rotate";
-        label = "ENCODER_MSC_DOWN_UP";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        tap-ms = <20>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
     };
-};
 
     keymap {
         compatible = "zmk,keymap";
@@ -130,10 +133,10 @@ behaviors {
 
         NUM {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4         &kp N5                              &kp N6     &kp N7   &kp N8  &kp N9  &kp N0
-&trans  &trans  &trans  &kp SEMICOLON  &kp UNDERSCORE  &trans      &trans  &kp EQUAL  &kp SQT  &trans  &trans  &trans
-&trans  &trans  &trans  &trans         &trans          &trans      &trans  &trans     &trans   &trans  &trans  &trans
-&trans  &trans  &trans  &trans         &trans          &trans      &trans  &trans                              &kp DEL
+&kp N1  &kp N2          &kp N3          &kp N4         &kp N5                              &kp N6     &kp N7   &kp N8  &kp N9  &kp N0
+&trans  &trans          &kp UP_ARROW    &kp SEMICOLON  &kp UNDERSCORE  &trans      &trans  &kp EQUAL  &kp SQT  &trans  &trans  &kp QUESTION
+&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &trans          &trans      &trans  &trans     &trans   &trans  &trans  &kp PIPE
+&trans  &trans          &trans          &trans         &trans          &trans      &trans  &trans                              &kp DEL
             >;
         };
 
