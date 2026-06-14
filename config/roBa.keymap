@@ -148,7 +148,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         MOUSE {
