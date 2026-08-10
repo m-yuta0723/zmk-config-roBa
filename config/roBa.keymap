@@ -96,7 +96,7 @@
 &kp Q                &kp W               &kp E         &kp R     &kp T                                                  &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A                &kp S               &kp D         &kp F     &kp G      &mkp MB3                &kp LC(LEFT_ARROW)  &kp H        &kp J  &kp K      &kp L    &lt 3 SLASH
 &kp Z                &kp X               &kp C         &kp V     &kp B      &lt 3 LC(UP_ARROW)      &kp LC(RIGHT)       &kp N        &kp M  &kp COMMA  &kp DOT  &kp BACKSLASH
-&mt LEFT_GUI ESCAPE  &mt LEFT_SHIFT TAB  &kp LEFT_ALT  &mkp MB2  &kp SPACE  &mkp MB1                &lt 1 BACKSPACE     &lt 2 ENTER                             &studio_unlock
+&mt LEFT_GUI ESCAPE  &mt LEFT_SHIFT TAB  &kp LEFT_ALT  &mkp MB2  &kp SPACE  &mkp MB1                &lt 1 BACKSPACE     &lt 2 ENTER                             &kp LG(Q)
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;

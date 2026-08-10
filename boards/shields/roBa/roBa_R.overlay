@@ -39,6 +39,8 @@
 &mouse_runtime_input_processor {
     temp-layer-enabled;
     temp-layer = <4>;
+    /* 旧 CONFIG_PMW3610_AUTOMOUSE_TIMEOUT_MS=700 相当 (モジュール既定は500) */
+    temp-layer-deactivation-delay-ms = <700>;
 };
 
 &pinctrl {
