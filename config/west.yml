@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/cormoran
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: m-yuta0723
+      url-base: https://github.com/m-yuta0723
   projects:
     # ZMK core: DYA Studio 用 RPC サブシステムを含む cormoran fork
     - name: zmk
@@ -34,9 +36,14 @@ manifest:
     # マクロ&コンボ タブ用のサブシステム。
     # 両モジュールが共通で依存する設定ストレージ。import: true に頼らず
     # 明示的に1回だけ書いて、二重定義を避ける。
+    #
+    # 上流(cormoran/main)はKconfigに configdefault を使っており、
+    # ZMK v0.3系同梱のZephyrが解析できずビルドが落ちる。
+    # その1ブロックだけを外した派生を参照する。
+    # 代替として下の roBa_R.conf で CONFIG_MAIN_STACK_SIZE=2048 を明示している。
     - name: zmk-feature-custom-settings
-      remote: cormoran
-      revision: main
+      remote: m-yuta0723
+      revision: v0.3-compat
     - name: zmk-feature-runtime-macro
       remote: cormoran
       revision: main
