@@ -30,5 +30,18 @@ manifest:
     - name: zmk-behavior-runtime-sensor-rotate
       remote: cormoran
       revision: main
+
+    # マクロ&コンボ タブ用のサブシステム。
+    # 両モジュールが共通で依存する設定ストレージ。import: true に頼らず
+    # 明示的に1回だけ書いて、二重定義を避ける。
+    - name: zmk-feature-custom-settings
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-runtime-macro
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-runtime-combo
+      remote: cormoran
+      revision: main
   self:
     path: config
